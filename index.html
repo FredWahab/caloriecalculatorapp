@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container"> <!-- Added a container for centering -->
+        <h1>Calorie Calculator</h1>
+        <form id="calorieForm">
+            <label class="gender">Gender:</label>
+            <div class="gender">
+                <label for="male" class="inline-label">
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                </label>
+                <label for="female" class="inline-label">
+                    <input type="radio" id="female" name="gender" value="female" required> Female
+                </label>
+            </div>
+
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" required min="1"><br>
+
+            <label for="weight">Weight (lbs):</label>
+            <input type="number" id="weight" required min="1"><br>
+
+            <label for="height">Height:</label>
+            <div class="height-container">
+                <select id="heightFeet" required>
+                    <option value="">Feet</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <select id="heightInches" required>
+                    <option value="">Inches</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+            </div>
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" required>
+                <option value="">Select an activity level</option>
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly_active">Lightly Active</option>
+                <option value="moderately_active">Moderately Active</option>
+                <option value="very_active">Very Active</option>
+            </select><br>
+
+            <button type="button" onclick="calculateCalories()">Calculate</button>
+            <button type="button" id="resetButton" onclick="document.getElementById('calorieForm').reset(); document.getElementById('result').innerHTML = '';">Reset</button>
+        </form>
+
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="calorieCalculator.js"></script>
+</body>
+</html>

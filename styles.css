@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
+.container {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center; /* Center text */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="number"], select {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; /* Full width for inputs */
+    max-width: 250px; /* Set a max width for age and weight inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+}
+
+.gender {
+    margin-top: 10px;
+}
+
+.inline-label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.height-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%; /* Make buttons take up half width */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resetButton {
+    background-color: #f44336; /* Reset button color */
+}
+
+#resetButton:hover {
+    background-color: #c62828; /* Darker shade on hover */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e2e3e5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
